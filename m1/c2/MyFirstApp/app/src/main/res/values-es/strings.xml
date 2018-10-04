@@ -5,4 +5,5 @@
     <string name="hint_name">Nombre.</string>
     <string name="welcome">¡Bienvenido %s!</string>
     <string name="error_no_name">Ingresa tu nombre.</string>
+    <string name="action_share">Compartir...</string>
 </resources>
