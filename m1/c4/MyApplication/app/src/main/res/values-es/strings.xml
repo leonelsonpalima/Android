@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Estado del modo avión</string>
+    <string name="airplane_mode_enabled">Modo avión encendido...</string>
+    <string name="airplane_mode_disabled">Modo avión apagado....</string>
+</resources>
