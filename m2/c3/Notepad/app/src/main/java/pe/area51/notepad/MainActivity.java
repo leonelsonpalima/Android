@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
+import pe.area51.notepad.domain.Note;
+
 public class MainActivity extends AppCompatActivity implements FragmentList.FragmentListInterface {
 
     private FragmentManager fragmentManager;
@@ -38,6 +40,12 @@ public class MainActivity extends AppCompatActivity implements FragmentList.Frag
         fragmentManager
                 .beginTransaction()
                 .addToBackStack(null)
+                .setCustomAnimations(
+                        android.R.anim.fade_in,
+                        android.R.anim.fade_out,
+                        android.R.anim.fade_in,
+                        android.R.anim.fade_out
+                        )
                 .replace(R.id.fragmentContainer, fragmentContent)
                 .commit();
     }

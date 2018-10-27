@@ -1,4 +1,4 @@
-package pe.area51.notepad;
+package pe.area51.notepad.domain;
 
 import android.support.annotation.NonNull;
 

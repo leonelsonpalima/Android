@@ -19,6 +19,9 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import pe.area51.notepad.domain.Note;
+import pe.area51.notepad.domain.NotesRepository;
+
 public class FragmentList extends Fragment {
 
     public static final String TAG = "ListFragment";
@@ -27,10 +30,15 @@ public class FragmentList extends Fragment {
 
     private ArrayAdapter<Note> notesArrayAdapter;
 
+
+    private NotesRepository notesRepository;
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         onNoteSelectedListener = (FragmentListInterface) context;
+        final Application application = (Application) context.getApplicationContext();
+        notesRepository = application.getNotesRepository();
     }
 
     @Override
@@ -61,6 +69,7 @@ public class FragmentList extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_list, container, false);
         final ListView listViewElements = view.findViewById(R.id.listView);
         notesArrayAdapter = new NoteAdapter(getActivity());
+        notesArrayAdapter.addAll(notesRepository.getAllNotes());
         listViewElements.setAdapter(notesArrayAdapter);
         listViewElements.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -87,7 +96,8 @@ public class FragmentList extends Fragment {
                 getString(R.string.lorem_ipsum),
                 System.currentTimeMillis()
         );
-        notesArrayAdapter.add(note);
+        final Note createdNote = notesRepository.createNote(note);
+        notesArrayAdapter.add(createdNote);
     }
 
     public interface FragmentListInterface {
