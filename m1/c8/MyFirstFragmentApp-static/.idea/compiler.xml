@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="CompilerConfiguration">
     <resourceExtensions />
     <wildcardResourcePatterns>
@@ -18,5 +19,9 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+=======
+  <component name="RmicSettings">
+    <option name="IS_EANABLED" value="true" />
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
   </component>
 </project>

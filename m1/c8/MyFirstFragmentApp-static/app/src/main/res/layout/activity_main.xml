@@ -10,6 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+<<<<<<< HEAD
     android:weightSum="2"
     tools:context="pe.area51.myfirstfragmentapp.MainActivity">
 
@@ -28,5 +29,20 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         tools:layout="@layout/fragment_welcome" />
+=======
+    tools:context="pe.area51.myfirstfragmentapp.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
 
 </LinearLayout>

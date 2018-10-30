@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Airplane Mod Detector</string>
+    <string name="airplane_mode_enabled">Airplane Mode On.</string>
+    <string name="airplane_mode_disabled">Airplane Mode off.</string>
+</resources>

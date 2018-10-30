@@ -19,6 +19,12 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+<<<<<<< HEAD
+=======
+import pe.area51.notepad.domain.Note;
+import pe.area51.notepad.domain.NotesRepository;
+
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
 public class FragmentList extends Fragment {
 
     public static final String TAG = "ListFragment";
@@ -27,10 +33,21 @@ public class FragmentList extends Fragment {
 
     private ArrayAdapter<Note> notesArrayAdapter;
 
+<<<<<<< HEAD
+=======
+
+    private NotesRepository notesRepository;
+
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         onNoteSelectedListener = (FragmentListInterface) context;
+<<<<<<< HEAD
+=======
+        final Application application = (Application) context.getApplicationContext();
+        notesRepository = application.getNotesRepository();
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
     }
 
     @Override
@@ -61,6 +78,10 @@ public class FragmentList extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_list, container, false);
         final ListView listViewElements = view.findViewById(R.id.listView);
         notesArrayAdapter = new NoteAdapter(getActivity());
+<<<<<<< HEAD
+=======
+        notesArrayAdapter.addAll(notesRepository.getAllNotes());
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
         listViewElements.setAdapter(notesArrayAdapter);
         listViewElements.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -87,7 +108,12 @@ public class FragmentList extends Fragment {
                 getString(R.string.lorem_ipsum),
                 System.currentTimeMillis()
         );
+<<<<<<< HEAD
         notesArrayAdapter.add(note);
+=======
+        final Note createdNote = notesRepository.createNote(note);
+        notesArrayAdapter.add(createdNote);
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
     }
 
     public interface FragmentListInterface {

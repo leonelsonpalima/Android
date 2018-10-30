@@ -4,6 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
+<<<<<<< HEAD
+=======
+import pe.area51.notepad.domain.Note;
+
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
 public class MainActivity extends AppCompatActivity implements FragmentList.FragmentListInterface {
 
     private FragmentManager fragmentManager;
@@ -38,6 +43,15 @@ public class MainActivity extends AppCompatActivity implements FragmentList.Frag
         fragmentManager
                 .beginTransaction()
                 .addToBackStack(null)
+<<<<<<< HEAD
+=======
+                .setCustomAnimations(
+                        android.R.anim.fade_in,
+                        android.R.anim.fade_out,
+                        android.R.anim.fade_in,
+                        android.R.anim.fade_out
+                        )
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
                 .replace(R.id.fragmentContainer, fragmentContent)
                 .commit();
     }

@@ -11,6 +11,11 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Date;
 
+<<<<<<< HEAD
+=======
+import pe.area51.notepad.domain.Note;
+
+>>>>>>> efcda075c2a4068226b8c41a8e27829667057a1f
 public class FragmentContent extends Fragment {
 
     private static final String KEY_ARG_NOTE_TITLE = "note_title";
